@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Woomelly Extension 016 Add ons 
- * Version: 1.0.0
+ * Version: 1.1.0
  * Plugin URI: https://woomelly.com
  * Description: Woomelly custom extension.
  * Author: Team MakePlugins
@@ -145,6 +145,13 @@ if ( ! function_exists( 'woomelly_admin_menu_ext_016' ) ) {
             </div>
     	<?php
 	}
+}
+
+if ( ! function_exists( 'woomelly_sync_first_variation_img_ext_016' ) ) {
+    add_filter( 'woomelly_sync_first_variation_img', 'woomelly_sync_first_variation_img_ext_016', 10, 1 );
+    function woomelly_sync_first_variation_img_ext_016( $value ) {
+        return false;
+    }
 }
 
 ?>
